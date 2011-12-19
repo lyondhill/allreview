@@ -5,6 +5,10 @@ group :assets do
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
 end
+
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 gem 'jquery-rails'
 gem "rspec-rails", ">= 2.8.0.rc1", :group => [:development, :test]
 gem "database_cleaner", ">= 0.7.0", :group => :test
