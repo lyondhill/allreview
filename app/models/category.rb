@@ -1,9 +1,8 @@
 class Category
   include Mongoid::Document
 
-  has_many :sub_categories
-
   field :name
 
+  has_many :sub_categories
 
 end

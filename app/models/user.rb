@@ -1,18 +1,11 @@
 class User
   include Mongoid::Document
-
-
-  field :provider, :type => String
-  field :uid, :type => String
   field :name, :type => String
 
-  def self.create_with_omniauth(auth)
-    create! do |user|
-      user.provider = auth["provider"]
-      user.uid = auth["uid"]
-      user.name = auth["info"]["name"]
-    end
-    
+  has_many :authorizations
+
+  def self.create_from_hash!(hash)
+    create(:name => hash['info']['name'])
   end
 
 end

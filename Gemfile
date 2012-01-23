@@ -8,7 +8,6 @@ end
 
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
-gem 'omniauth-google-oauth2'
 gem 'jquery-rails'
 gem "rspec-rails", ">= 2.8.0.rc1", :group => [:development, :test]
 gem "database_cleaner", ">= 0.7.0", :group => :test
@@ -18,5 +17,5 @@ gem "cucumber-rails", ">= 1.2.0", :group => :test
 gem "capybara", ">= 1.1.2", :group => :test
 gem "launchy", ">= 2.0.5", :group => :test
 gem "bson_ext", ">= 1.3.1"
-gem "mongoid", ">= 2.3.3"
 gem "devise", ">= 1.5.0"
+gem 'pry'
