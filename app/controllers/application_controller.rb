@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  helper_method :current_user, :signed_in?
+  helper_method :current_product, :current_user, :signed_in?
+  before_filter :current_product
 
 
   def current_user
@@ -8,6 +9,12 @@ class ApplicationController < ActionController::Base
   rescue
     @current_user = nil
     session[:user_id] = nil
+  end
+
+  def current_product
+    @current_product ||= Product.find(params[:product_id]) if params[:product_id]
+  # rescue
+  #   @current_product = nil
   end
 
   def signed_in?

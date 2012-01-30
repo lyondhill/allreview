@@ -1,4 +1,19 @@
 Allreviews::Application.routes.draw do
+  
+  resources :sub_categories
+
+
+  resources :categories
+
+  # resources :reviews
+
+  # resources :products
+
+  resources :products do
+    resources :reviews
+  end
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

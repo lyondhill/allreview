@@ -16,6 +16,7 @@ gem "factory_girl_rails", ">= 1.4.0", :group => :test
 gem "cucumber-rails", ">= 1.2.0", :group => :test
 gem "capybara", ">= 1.1.2", :group => :test
 gem "launchy", ">= 2.0.5", :group => :test
-gem "bson_ext", ">= 1.3.1"
+gem "mongoid"
+gem "bson_ext", "~> 1.5"
 gem "devise", ">= 1.5.0"
 gem 'pry'
